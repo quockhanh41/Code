@@ -1,0 +1,1 @@
+{"name":"Local: chuTrinh","url":"c:\\Users\\quockhanh\\OneDrive\\Desktop\\codee\\tree\\chuTrinh.cpp","tests":[{"id":1687762203123,"input":"7 6\n1 2 \n2 3 \n3 6 \n4 2 \n6 7 \n7 3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\quockhanh\\OneDrive\\Desktop\\codee\\tree\\chuTrinh.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: euler","url":"c:\\Users\\quockhanh\\OneDrive\\Desktop\\codee\\graph\\euler.cpp","tests":[{"id":1690344469792,"input":"6 8\n1 2\n1 5\n2 3\n2 4\n3 4\n4 5\n4 6\n5 6","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\quockhanh\\OneDrive\\Desktop\\codee\\graph\\euler.cpp","group":"local","local":true}
