@@ -55,6 +55,16 @@
         "map": "cpp",
         "numeric": "cpp",
         "queue": "cpp",
-        "optional": "cpp"
+        "optional": "cpp",
+        "array": "cpp",
+        "*.tcc": "cpp",
+        "cstdarg": "cpp",
+        "cwctype": "cpp",
+        "unordered_map": "cpp",
+        "functional": "cpp",
+        "memory_resource": "cpp",
+        "random": "cpp",
+        "string_view": "cpp",
+        "numbers": "cpp"
     }
 }

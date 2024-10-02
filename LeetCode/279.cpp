@@ -1,30 +1,35 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
+#include <cmath>
 using namespace std;
 int numSquares(int n)
 {
-    int res = 0;
-    if (n < 1)
-        return 0;
-    vector<int> square;
-    square.push_back(1);
-    bool isQuare[1000] = {0};
+    if (sqrt(n) == (int)sqrt(n))
+        return 1;
+    int *f = new int[n + 1];
+    f[0] = 0;
+    f[1] = 1;
     for (int i = 2; i <= n; i++)
     {
-        if (!isQuare[i])
+        f[i] = INT_MAX;
+    }
+
+    for (int i = n; i >= 1; i--)
+    {
+        if (sqrt(i) == (int)sqrt(i))
         {
-            int j = i;
-            while (j * j <= n)
+            for (int j = i; j <= n; j++)
             {
-                isQuare[j * j] = 1;
-                j = j * j;
+                if (f[j - i] != INT_MAX)
+                    f[j] = min(f[j], f[j - i] + 1);
             }
         }
-        else
-            square.push_back(i);
     }
+
+    return f[n];
 }
 int main()
 {
-    numSquares(12);
+    cout << numSquares(4);
 }

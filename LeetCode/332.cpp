@@ -1,30 +1,29 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <cstring>
 using namespace std;
 int coinChange(vector<int> &coins, int amount)
 {
-    sort(coins.begin(), coins.end());
-    int res = 0;
-    int i = coins.size() - 1;
-    while (i >= 0 && amount > 0)
+    int *f = new int[amount + 1];
+    for (int i = 1; i <= amount; i++)
     {
-        if (amount >= coins[i])
-        {
-            cout << amount << " " << coins[i] << endl;
-            amount -= coins[i];
-            res++;
-        }
-        else
-            i--;
+        f[i] = INT_MAX;
     }
-    cout << amount;
-    if (amount == 0)
-        return res;
-    return -1;
+
+    f[0] = 0;
+    for (int i = coins.size() - 1; i >= 0; i--)
+    {
+        for (int j = coins[i]; j <= amount; j++)
+        {
+            if (f[j - coins[i]] != INT_MAX)
+                f[j] = min(f[j], f[j - coins[i]] + 1);
+        }
+    }
+    return f[amount] == INT_MAX ? -1 : f[amount];
 }
 int main()
 {
-    vector<int> a = {186, 419, 83, 408};
-    cout << coinChange(a, 6249);
+    vector<int> a = {1, 2, 5};
+    cout << coinChange(a, 11);
 }
