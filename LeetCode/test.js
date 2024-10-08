@@ -3,7 +3,7 @@ let display = (a, b) => {
 }
 // setTimeout(display(1, 4), 3000);
 
-setTimeout(() => "ilu", 3000);
+setTimeout(() => "ilu", 2000);
 
 function myFunction(value) {
   console.log(value);
