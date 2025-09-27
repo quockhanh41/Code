@@ -1,0 +1,24 @@
+# Ignore all executables (files without extension) in all directories
+*
+!*/
+!*.*
+
+# Keep specific files without extension that you want to track (if any)
+# !somefile
+
+# C++ specific
+*.out
+*.o
+*.obj
+*.exe
+*.app
+*.dll
+*.so
+*.dylib
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
