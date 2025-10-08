@@ -26,4 +26,5 @@ int lengthOfLongestSubstring(string s)
 int main()
 {
     cout << lengthOfLongestSubstring("dvdf");
+    return 0;
 }

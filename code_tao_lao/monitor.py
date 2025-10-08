@@ -358,20 +358,24 @@ def main():
     print("=" * 40)
     
     # Get credentials
-    username = input("👤 Username: ").strip()
-    password = getpass.getpass("🔐 Password: ")
+    # username = input("👤 Username: ").strip()
+    # password = getpass.getpass("🔐 Password: ")
+    
+    username = "22127188"
+    password = "Khanh0401"
+    mamg = 5902
     
     # Get MaMG
-    print("\n📚 Enter MaMG number to monitor:")
-    print("  5907 - CSC12005 (usually full)")
-    print("  5930 - CSC15104 (varies)")
-    print("  5838 - CSC13002 (varies)")
+    # print("\n📚 Enter MaMG number to monitor:")
+    # print("  5907 - CSC12005 (usually full)")
+    # print("  5930 - CSC15104 (varies)")
+    # print("  5838 - CSC13002 (varies)")
     
-    try:
-        mamg = int(input("🔢 MaMG: "))
-    except ValueError:
-        print("❌ Invalid MaMG")
-        return
+    # try:
+    #     mamg = int(input("🔢 MaMG: "))
+    # except ValueError:
+    #     print("❌ Invalid MaMG")
+    #     return
     
     # # Get interval
     # try:
@@ -382,7 +386,7 @@ def main():
     
     # Start monitoring
     monitor = WorkingCourseMonitor(username, password)
-    monitor.monitor_course(mamg, 30)
+    monitor.monitor_course(mamg, 5)
 
 if __name__ == "__main__":
     main()
